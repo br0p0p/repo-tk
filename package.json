@@ -1,0 +1,22 @@
+{
+  "name": "rewrite-imports-to-esm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.0.2",
+    "tap": "^21.0.0",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "enhanced-resolve": "^5.17.1",
+    "ts-morph": "^23.0.0"
+  }
+}
