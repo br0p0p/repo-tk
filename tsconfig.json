@@ -3,13 +3,14 @@
   "_version": "20.1.0",
 
   "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ESNext",
-
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "target": "ESNext"
   }
 }
