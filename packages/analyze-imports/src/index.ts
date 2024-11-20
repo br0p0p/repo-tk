@@ -86,7 +86,7 @@ export async function analyzeImports(args: Args) {
 
 				// console.log({ importedSymbols });
 
-				importedSymbols.forEach((x) => {
+				for (const x of importedSymbols) {
 					if (!importNameMatcher || importNameMatcher.test(x)) {
 						if (importSymbolStatsMap.has(x)) {
 							importSymbolStatsMap
@@ -100,7 +100,7 @@ export async function analyzeImports(args: Args) {
 						}
 						// symbolCount.set(x, (symbolCount.get(x) ?? 0) + 1);
 					}
-				});
+				}
 			}
 		});
 
@@ -111,18 +111,16 @@ export async function analyzeImports(args: Args) {
 				let result = `${pc.green(name)} - ${importSymbolStats.count()}`;
 
 				if (showFilenames) {
-					result +=
-						"\n" +
-						importSymbolStats.filenames
-							.map((f) => {
-								const renderedFilename =
-									filenameFormat === "absolute"
-										? f
-										: path.relative(relativeFrom, f);
+					result += `\n${importSymbolStats.filenames
+						.map((f) => {
+							const renderedFilename =
+								filenameFormat === "absolute"
+									? f
+									: path.relative(relativeFrom, f);
 
-								return `\t` + renderedFilename;
-							})
-							.join("\n");
+							return `\t${renderedFilename}`;
+						})
+						.join("\n")}`;
 				}
 
 				return result;

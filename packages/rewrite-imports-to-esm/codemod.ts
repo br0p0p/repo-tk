@@ -37,14 +37,14 @@ export async function run(
 	let totalImports = 0;
 	let totalExports = 0;
 
-	sourceFiles.forEach((sourceFile) => {
+	for (const sourceFile of sourceFiles) {
 		const filePath = sourceFile.getFilePath();
 		const importDeclarations = sourceFile.getImportDeclarations();
 
 		let fileUpdated = false;
 		console.group(filePath);
 
-		importDeclarations.forEach((importDeclaration) => {
+		for (const importDeclaration of importDeclarations) {
 			const moduleSpecifier = importDeclaration.getModuleSpecifierValue();
 
 			// Only process relative paths without extensions
@@ -84,11 +84,11 @@ export async function run(
 					);
 				}
 			}
-		});
+		}
 
 		const exportDeclarations = sourceFile.getExportDeclarations();
 
-		exportDeclarations.forEach((exportDeclaration) => {
+		for (const exportDeclaration of exportDeclarations) {
 			const moduleSpecifier = exportDeclaration.getModuleSpecifierValue();
 
 			// Only process relative paths without extensions
@@ -128,7 +128,7 @@ export async function run(
 					);
 				}
 			}
-		});
+		}
 
 		console.groupEnd();
 
@@ -138,7 +138,7 @@ export async function run(
 		if (fileUpdated) {
 			totalUpdatedFiles += 1;
 		}
-	});
+	}
 
 	console.group(
 		`Found ${sourceFiles.length} files matching "${path.join(
@@ -172,9 +172,9 @@ export function rewriteModuleSpecifier(
 ) {
 	const resolvedJsPath = path
 		.relative(path.dirname(filePath), resolvedModule)
-		.replace(path.extname(resolvedModule), `.js`);
+		.replace(path.extname(resolvedModule), ".js");
 
 	return resolvedJsPath.startsWith(".")
 		? resolvedJsPath
-		: "./" + resolvedJsPath;
+		: `./${resolvedJsPath}`;
 }
