@@ -1,7 +1,7 @@
 {
 	"name": "@repo-tk/monorepo",
 	"engines": {
-		"node": "^22"
+		"node": "^20"
 	},
 	"packageManager": "pnpm@9.12.2",
 	"devDependencies": {
