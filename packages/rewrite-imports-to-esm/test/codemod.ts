@@ -1,5 +1,5 @@
 import t from "tap";
-import { shouldRewriteModuleSpecifier } from "../codemod";
+import { shouldRewriteModuleSpecifier } from "../codemod.js";
 
 t.test("shouldRewriteModuleSpecifier", (t) => {
   const cases: [string, boolean][] = [
@@ -28,7 +28,7 @@ t.test("shouldRewriteModuleSpecifier", (t) => {
     t.equal(
       shouldRewriteModuleSpecifier(path),
       expected,
-      `shouldRewriteModuleSpecifier("${path}") => ${expected}`,
+      `shouldRewriteModuleSpecifier("${path}") => ${expected}`
     );
   }
 

@@ -1,4 +1,4 @@
-import { run } from "./codemod";
+import { run } from "./codemod.js";
 import { argv } from "node:process";
 
 const [rootDirArg, pathGlobArg] = argv.slice(2);
