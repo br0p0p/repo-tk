@@ -25,7 +25,7 @@
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "double",
-			"indentSize": 2
+			"indentWidth": 2
 		}
 	}
 }
