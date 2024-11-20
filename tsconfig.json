@@ -5,12 +5,17 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
+    "moduleDetection": "force",
     "moduleResolution": "NodeNext",
+    "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "ESNext",
+    "verbatimModuleSyntax": true
   }
 }
