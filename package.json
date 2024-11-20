@@ -16,7 +16,7 @@
 	},
 	"scripts": {
 		"checks": "pnpm typecheck && pnpm lint && pnpm -r test",
-		"lint": "biome check",
+		"lint": "biome ci",
 		"typecheck": "pnpm -r typecheck",
 		"changeset-version": "changeset version",
 		"release": "changeset publish"
