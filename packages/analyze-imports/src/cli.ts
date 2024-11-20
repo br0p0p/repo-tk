@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import { argv } from "node:process";
 import mri from "mri";
-import { type Args, analyzeImports } from "./src/index.js";
+import { type Args, analyzeImports } from "./index.js";
 
 const defaultArgs: Omit<Args, "specifier"> = {
 	cwd: process.cwd(),

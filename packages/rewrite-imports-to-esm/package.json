@@ -3,10 +3,18 @@
 	"version": "0.1.0",
 	"type": "module",
 	"description": "",
-	"main": "index.js",
+	"main": "./dist/commonjs/index.js",
+	"types": "./dist/commonjs/index.d.ts",
+	"module": "./dist/esm/index.js",
+	"files": ["dist"],
+	"bin": {
+		"rewrite-imports-to-esm": "./dist/esm/cli.js"
+	},
 	"scripts": {
 		"dev": "tsx cli.ts",
-		"test": "tap run --allow-incomplete-coverage"
+		"prepare": "tshy",
+		"test": "tap run --allow-incomplete-coverage",
+		"typecheck": "tsc --noEmit"
 	},
 	"keywords": [],
 	"author": "",
@@ -14,5 +22,35 @@
 	"dependencies": {
 		"enhanced-resolve": "^5.17.1",
 		"ts-morph": "^23.0.0"
+	},
+	"tshy": {
+		"exports": {
+			"./package.json": "./package.json",
+			".": "./src/index.ts",
+			"./cli": "./src/cli.ts"
+		}
+	},
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/index.d.ts",
+				"default": "./dist/commonjs/index.js"
+			}
+		},
+		"./cli": {
+			"import": {
+				"types": "./dist/esm/cli.d.ts",
+				"default": "./dist/esm/cli.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/cli.d.ts",
+				"default": "./dist/commonjs/cli.js"
+			}
+		}
 	}
 }

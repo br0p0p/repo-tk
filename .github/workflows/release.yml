@@ -25,7 +25,9 @@ jobs:
           cache: pnpm
 
       - name: Install Dependencies
-        run: pnpm i
+        run: |
+          pnpm i
+          git diff --name-only | xargs pnpm biome format --write
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets

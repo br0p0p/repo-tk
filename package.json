@@ -10,13 +10,14 @@
 		"@changesets/cli": "^2.27.10",
 		"@types/node": "^22.9.1",
 		"tap": "^21.0.1",
+		"tshy": "^3.0.2",
 		"tsx": "^4.19.2",
 		"typescript": "^5.6.3"
 	},
 	"scripts": {
 		"checks": "pnpm typecheck && pnpm lint && pnpm -r test",
-		"lint": "biome check",
-		"typecheck": "tsc --noEmit",
+		"lint": "biome ci",
+		"typecheck": "pnpm -r typecheck",
 		"changeset-version": "changeset version",
 		"release": "changeset publish"
 	}

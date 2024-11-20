@@ -1,5 +1,5 @@
 import t from "tap";
-import { shouldRewriteModuleSpecifier } from "../codemod.js";
+import { shouldRewriteModuleSpecifier } from "../src/index.js";
 
 t.test("shouldRewriteModuleSpecifier", (t) => {
 	const cases: [string, boolean][] = [
