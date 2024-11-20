@@ -13,6 +13,6 @@
   },
   "scripts": {
     "changeset-version": "changeset version",
-    "changeset-publish": "changeset publish"
+    "release": "changeset publish"
   }
 }
