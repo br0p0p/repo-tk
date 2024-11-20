@@ -1,0 +1,19 @@
+{
+  "name": "analyze-imports",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx cli.ts"
+  },
+  "dependencies": {
+    "enhanced-resolve": "^5.17.1",
+    "mri": "^1.2.0",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.2",
+    "remeda": "^2.15.0",
+    "ts-morph": "^23.0.0"
+  },
+  "devDependencies": {
+    "@types/picomatch": "^3.0.1"
+  }
+}
