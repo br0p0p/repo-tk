@@ -2,6 +2,9 @@
 	"name": "@repo-tk/analyze-imports",
 	"version": "0.1.0",
 	"type": "module",
+	"main": "./dist/commonjs/index.js",
+	"types": "./dist/commonjs/index.d.ts",
+	"module": "./dist/esm/index.js",
 	"files": ["dist"],
 	"bin": {
 		"analyze-imports": "./dist/esm/cli.js"
@@ -52,7 +55,9 @@
 			}
 		}
 	},
-	"main": "./dist/commonjs/index.js",
-	"types": "./dist/commonjs/index.d.ts",
-	"module": "./dist/esm/index.js"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/br0p0p/repo-tk.git",
+		"directory": "packages/analyze-imports"
+	}
 }

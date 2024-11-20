@@ -52,5 +52,10 @@
 				"default": "./dist/commonjs/cli.js"
 			}
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/br0p0p/repo-tk.git",
+		"directory": "packages/rewrite-imports-to-esm"
 	}
 }
