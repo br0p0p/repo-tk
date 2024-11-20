@@ -23,7 +23,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"enhanced-resolve": "^5.17.1",
-		"ts-morph": "^23.0.0"
+		"ts-morph": "^24.0.0"
 	},
 	"tshy": {
 		"exports": {
