@@ -11,7 +11,7 @@ const resolver = resolve.create.sync({
 
 export async function run(
   rootDirArg: string = process.cwd(),
-  pathGlobArg: string,
+  pathGlobArg: string = "**/*.{ts,tsx}"
 ) {
   const rootDir = path.isAbsolute(rootDirArg)
     ? rootDirArg
@@ -25,7 +25,7 @@ export async function run(
 
   // Replace this with the path to your source files
   const sourceFiles = project.addSourceFilesAtPaths(
-    path.join(rootDir, pathGlobArg ?? "**/*.{ts,tsx}"),
+    path.join(rootDir, pathGlobArg)
   );
 
   if (sourceFiles.length <= 0) {
@@ -51,7 +51,7 @@ export async function run(
       if (shouldRewriteModuleSpecifier(moduleSpecifier)) {
         const resolvedModule = resolver(
           path.dirname(filePath),
-          moduleSpecifier,
+          moduleSpecifier
         );
 
         if (resolvedModule) {
@@ -60,14 +60,14 @@ export async function run(
 
           const updatedModuleSpecifier = rewriteModuleSpecifier(
             filePath,
-            resolvedModule,
+            resolvedModule
           );
 
           console.log(
             "updated module specifier",
             moduleSpecifier,
             "to",
-            updatedModuleSpecifier,
+            updatedModuleSpecifier
           );
 
           // Replace the module specifier with .js extension
@@ -80,7 +80,7 @@ export async function run(
             "Could not resolve moduleSpecifier",
             moduleSpecifier,
             "from path",
-            filePath,
+            filePath
           );
         }
       }
@@ -95,7 +95,7 @@ export async function run(
       if (moduleSpecifier && shouldRewriteModuleSpecifier(moduleSpecifier)) {
         const resolvedModule = resolver(
           path.dirname(filePath),
-          moduleSpecifier,
+          moduleSpecifier
         );
 
         if (resolvedModule) {
@@ -104,14 +104,14 @@ export async function run(
 
           const updatedModuleSpecifier = rewriteModuleSpecifier(
             filePath,
-            resolvedModule,
+            resolvedModule
           );
 
           console.log(
             "updated module specifier",
             moduleSpecifier,
             "to",
-            updatedModuleSpecifier,
+            updatedModuleSpecifier
           );
 
           // Replace the module specifier with .js extension
@@ -124,7 +124,7 @@ export async function run(
             "Could not resolve moduleSpecifier",
             moduleSpecifier,
             "from path",
-            filePath,
+            filePath
           );
         }
       }
@@ -141,7 +141,10 @@ export async function run(
   });
 
   console.group(
-    `Found ${sourceFiles.length} files matching "${path.join(rootDirArg, pathGlobArg)}"`,
+    `Found ${sourceFiles.length} files matching "${path.join(
+      rootDirArg,
+      pathGlobArg
+    )}"`
   );
   console.log("Updated files:", totalUpdatedFiles);
   console.log("Imports:", totalImports);
@@ -165,7 +168,7 @@ export function shouldRewriteModuleSpecifier(moduleSpecifier: string) {
 
 export function rewriteModuleSpecifier(
   filePath: string,
-  resolvedModule: string,
+  resolvedModule: string
 ) {
   const resolvedJsPath = path
     .relative(path.dirname(filePath), resolvedModule)
