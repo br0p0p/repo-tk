@@ -1,12 +1,14 @@
 {
 	"name": "@repo-tk/rewrite-imports-to-esm",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"type": "module",
 	"description": "",
 	"main": "./dist/commonjs/index.js",
 	"types": "./dist/commonjs/index.d.ts",
 	"module": "./dist/esm/index.js",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"bin": {
 		"rewrite-imports-to-esm": "./dist/esm/cli.js"
 	},
@@ -52,6 +54,9 @@
 				"default": "./dist/commonjs/cli.js"
 			}
 		}
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"repository": {
 		"type": "git",
