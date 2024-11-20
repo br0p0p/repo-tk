@@ -28,14 +28,11 @@ jobs:
           node-version: 22.x
           cache: pnpm
 
-      - name: Enable corepack
-        run: corepack enable
-
       - name: Install Dependencies
         run: pnpm i
 
       - name: Run typechecks
-        run: pnpm -r exec tsc --noEmit
+        run: pnpm tsc --noEmit
 
       - name: Run tests
         run: pnpm -r test
