@@ -10,7 +10,7 @@
     "mri": "^1.2.0",
     "picocolors": "^1.1.1",
     "picomatch": "^4.0.2",
-    "remeda": "^2.15.0",
+    "remeda": "^2.17.3",
     "ts-morph": "^23.0.0"
   },
   "devDependencies": {
