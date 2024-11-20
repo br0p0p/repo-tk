@@ -13,7 +13,7 @@
 		"rewrite-imports-to-esm": "./dist/esm/cli.js"
 	},
 	"scripts": {
-		"dev": "tsx cli.ts",
+		"dev": "tsx ./src/cli.ts",
 		"prepare": "tshy",
 		"test": "tap run --allow-incomplete-coverage",
 		"typecheck": "tsc --noEmit"

@@ -12,7 +12,7 @@
 		"analyze-imports": "./dist/esm/cli.js"
 	},
 	"scripts": {
-		"dev": "tsx cli.ts",
+		"dev": "tsx ./src/cli.ts",
 		"prepare": "tshy",
 		"typecheck": "tsc --noEmit"
 	},
