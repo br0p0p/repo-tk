@@ -13,6 +13,7 @@
 		"typescript": "^5.6.3"
 	},
 	"scripts": {
+		"checks": "pnpm typecheck && pnpm lint && pnpm -r test",
 		"lint": "biome check",
 		"typecheck": "tsc --noEmit",
 		"changeset-version": "changeset version",
