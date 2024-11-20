@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { argv } from "node:process";
 import mri from "mri";
 import { type Args, analyzeImports } from "./index.js";
