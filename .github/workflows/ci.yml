@@ -32,7 +32,10 @@ jobs:
         run: pnpm i
 
       - name: Run typechecks
-        run: pnpm tsc --noEmit
+        run: pnpm typecheck
+
+      - name: Run lint checks
+        run: pnpm lint
 
       - name: Run tests
         run: pnpm -r test
