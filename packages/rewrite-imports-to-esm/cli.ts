@@ -1,5 +1,5 @@
 import { argv } from "node:process";
-import { run } from "./codemod.js";
+import { run } from "./src/index.js";
 
 const [rootDirArg, pathGlobArg] = argv.slice(2);
 

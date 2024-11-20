@@ -3,9 +3,13 @@
 	"version": "0.1.0",
 	"type": "module",
 	"description": "",
-	"main": "index.js",
+	"main": "./dist/commonjs/index.js",
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "tsx cli.ts",
+		"prepare": "tshy",
 		"test": "tap run --allow-incomplete-coverage"
 	},
 	"keywords": [],
@@ -14,5 +18,26 @@
 	"dependencies": {
 		"enhanced-resolve": "^5.17.1",
 		"ts-morph": "^23.0.0"
-	}
+	},
+	"tshy": {
+		"exports": {
+			"./package.json": "./package.json",
+			".": "./src/index.ts"
+		}
+	},
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/index.d.ts",
+				"default": "./dist/commonjs/index.js"
+			}
+		}
+	},
+	"types": "./dist/commonjs/index.d.ts",
+	"module": "./dist/esm/index.js"
 }
