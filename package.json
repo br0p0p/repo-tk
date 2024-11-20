@@ -1,18 +1,22 @@
 {
-  "name": "@repo-tk/monorepo",
-  "engines": {
-    "node": "^22"
-  },
-  "packageManager": "pnpm@9.12.2",
-  "devDependencies": {
-    "@changesets/cli": "^2.27.10",
-    "@types/node": "^22.9.1",
-    "tap": "^21.0.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
-  },
-  "scripts": {
-    "changeset-version": "changeset version",
-    "release": "changeset publish"
-  }
+	"name": "@repo-tk/monorepo",
+	"engines": {
+		"node": "^22"
+	},
+	"packageManager": "pnpm@9.12.2",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@changesets/cli": "^2.27.10",
+		"@types/node": "^22.9.1",
+		"tap": "^21.0.1",
+		"tsx": "^4.19.2",
+		"typescript": "^5.6.3"
+	},
+	"scripts": {
+		"checks": "pnpm typecheck && pnpm lint && pnpm -r test",
+		"lint": "biome check",
+		"typecheck": "tsc --noEmit",
+		"changeset-version": "changeset version",
+		"release": "changeset publish"
+	}
 }
