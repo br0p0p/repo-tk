@@ -55,9 +55,9 @@ export async function analyzeImports(args: Args) {
     "Scanning",
     sourceFiles.length,
     "files for imports matching",
-    `"${importName}"` ?? "anything",
+    importName ? `"${importName}"` : "anything",
     "from",
-    `"${specifier}" ...`,
+    `"${specifier}" ...`
   );
 
   sourceFiles
@@ -72,9 +72,7 @@ export async function analyzeImports(args: Args) {
       });
 
       const importedSymbols = matchedImports.flatMap((importDecl) =>
-        importDecl
-          .getNamedImports()
-          .map((namedImport) => namedImport.getName()),
+        importDecl.getNamedImports().map((namedImport) => namedImport.getName())
       );
 
       if (importedSymbols.length > 0) {
@@ -95,7 +93,7 @@ export async function analyzeImports(args: Args) {
             } else {
               importSymbolStatsMap.set(
                 x,
-                new ImportSymbolStats(x, [sourceFile.getFilePath()]),
+                new ImportSymbolStats(x, [sourceFile.getFilePath()])
               );
             }
             // symbolCount.set(x, (symbolCount.get(x) ?? 0) + 1);
@@ -127,7 +125,7 @@ export async function analyzeImports(args: Args) {
 
         return result;
       })
-      .join("\n"),
+      .join("\n")
   );
 }
 

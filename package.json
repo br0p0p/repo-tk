@@ -1,10 +1,18 @@
 {
-  "name": "repo-utils",
+  "name": "@repo-tk/monorepo",
+  "engines": {
+    "node": "^22"
+  },
   "packageManager": "pnpm@9.12.2",
   "devDependencies": {
-    "@types/node": "^22.0.2",
-    "tap": "^21.0.0",
-    "tsx": "^4.16.5",
-    "typescript": "^5.5.4"
+    "@changesets/cli": "^2.27.10",
+    "@types/node": "^22.9.1",
+    "tap": "^21.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "changeset-version": "changeset version",
+    "release": "changeset publish"
   }
 }

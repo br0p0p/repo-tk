@@ -1,11 +1,12 @@
 {
-  "name": "rewrite-imports-to-esm",
-  "type": "module",
+  "name": "@repo-tk/rewrite-imports-to-esm",
   "version": "0.1.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tap run"
+    "dev": "tsx cli.ts",
+    "test": "tap run --allow-incomplete-coverage"
   },
   "keywords": [],
   "author": "",
