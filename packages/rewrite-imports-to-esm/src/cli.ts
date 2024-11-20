@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 import { argv } from "node:process";
-import { run } from "./src/index.js";
+import { run } from "./index.js";
 
 const [rootDirArg, pathGlobArg] = argv.slice(2);
 

@@ -4,9 +4,14 @@
 	"type": "module",
 	"description": "",
 	"main": "./dist/commonjs/index.js",
+	"types": "./dist/commonjs/index.d.ts",
+	"module": "./dist/esm/index.js",
 	"files": [
 		"dist"
 	],
+	"bin": {
+		"rewrite-imports-to-esm": "./dist/esm/cli.js"
+	},
 	"scripts": {
 		"dev": "tsx cli.ts",
 		"prepare": "tshy",
@@ -22,7 +27,8 @@
 	"tshy": {
 		"exports": {
 			"./package.json": "./package.json",
-			".": "./src/index.ts"
+			".": "./src/index.ts",
+			"./cli": "./src/cli.ts"
 		}
 	},
 	"exports": {
@@ -36,8 +42,16 @@
 				"types": "./dist/commonjs/index.d.ts",
 				"default": "./dist/commonjs/index.js"
 			}
+		},
+		"./cli": {
+			"import": {
+				"types": "./dist/esm/cli.d.ts",
+				"default": "./dist/esm/cli.js"
+			},
+			"require": {
+				"types": "./dist/commonjs/cli.d.ts",
+				"default": "./dist/commonjs/cli.js"
+			}
 		}
-	},
-	"types": "./dist/commonjs/index.d.ts",
-	"module": "./dist/esm/index.js"
+	}
 }
