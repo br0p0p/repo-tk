@@ -8,7 +8,8 @@
 	},
 	"scripts": {
 		"dev": "tsx cli.ts",
-		"prepare": "tshy"
+		"prepare": "tshy",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"enhanced-resolve": "^5.17.1",

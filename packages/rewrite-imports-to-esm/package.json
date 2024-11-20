@@ -13,7 +13,8 @@
 	"scripts": {
 		"dev": "tsx cli.ts",
 		"prepare": "tshy",
-		"test": "tap run --allow-incomplete-coverage"
+		"test": "tap run --allow-incomplete-coverage",
+		"typecheck": "tsc --noEmit"
 	},
 	"keywords": [],
 	"author": "",

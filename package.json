@@ -17,7 +17,7 @@
 	"scripts": {
 		"checks": "pnpm typecheck && pnpm lint && pnpm -r test",
 		"lint": "biome check",
-		"typecheck": "tsc --noEmit",
+		"typecheck": "pnpm -r typecheck",
 		"changeset-version": "changeset version",
 		"release": "changeset publish"
 	}
