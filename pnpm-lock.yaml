@@ -54,8 +54,8 @@ importers:
         specifier: ^2.17.3
         version: 2.17.3
       ts-morph:
-        specifier: ^23.0.0
-        version: 23.0.0
+        specifier: ^24.0.0
+        version: 24.0.0
     devDependencies:
       '@types/picomatch':
         specifier: ^3.0.1
@@ -67,8 +67,8 @@ importers:
         specifier: ^5.17.1
         version: 5.17.1
       ts-morph:
-        specifier: ^23.0.0
-        version: 23.0.0
+        specifier: ^24.0.0
+        version: 24.0.0
 
 packages:
 
@@ -605,8 +605,8 @@ packages:
     peerDependencies:
       '@tapjs/core': 4.0.0
 
-  '@ts-morph/common@0.24.0':
-    resolution: {integrity: sha512-c1xMmNHWpNselmpIqursHeOHHBTIsJLbB+NuovbTTRCNiTLEr/U9dbJ8qy0jd/O2x5pc3seWuOUN5R2IoOTp8A==}
+  '@ts-morph/common@0.25.0':
+    resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
 
   '@tsconfig/node14@14.1.2':
     resolution: {integrity: sha512-1vncsbfCZ3TBLPxesRYz02Rn7SNJfbLoDVkcZ7F/ixOV6nwxwgdhD1mdPcc5YQ413qBJ8CvMxXMFfJ7oawjo7Q==}
@@ -778,8 +778,8 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  code-block-writer@13.0.2:
-    resolution: {integrity: sha512-XfXzAGiStXSmCIwrkdfvc7FS5Dtj8yelCtyOf2p2skCAfvLd6zu0rGzuS9NSCO3bq1JKpFZ7tbKdKlcd5occQA==}
+  code-block-writer@13.0.3:
+    resolution: {integrity: sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg==}
 
   code-excerpt@4.0.0:
     resolution: {integrity: sha512-xxodCmBen3iy2i0WtAK8FlFNrRzjUqjRsMfho58xT/wvZU1YTM3fCnRjcy1gJPMepaRlgm/0e6w8SpWHpn3/cA==}
@@ -907,6 +907,14 @@ packages:
 
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
+
+  fdir@6.4.2:
+    resolution: {integrity: sha512-KnhMXsKSPZlAhp7+IjUkRZKPb4fUyccpDrdFXbi4QL1qkmFh9kVY09Yox+n4MaOb3lHZ1Tv829C3oaaXoMYPDQ==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -1702,6 +1710,10 @@ packages:
     resolution: {integrity: sha512-pFYqmTw68LXVjeWJMST4+borgQP2AyMNbg1BpZh9LbyhUeNkeaPF9gzfPGUAnSMV3qPYdWUwDIjjCLiSDOl7vg==}
     engines: {node: '>=18'}
 
+  tinyglobby@0.2.10:
+    resolution: {integrity: sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==}
+    engines: {node: '>=12.0.0'}
+
   tmp@0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -1717,8 +1729,8 @@ packages:
     resolution: {integrity: sha512-iGbM7X2slv9ORDVj2y2FFUq3cP/ypbtu2nQ8S38ufjL0glBABvmR9pTdsib1XtS2LUhhLMbelaBUaf/s5J3dSw==}
     engines: {node: '>= 8'}
 
-  ts-morph@23.0.0:
-    resolution: {integrity: sha512-FcvFx7a9E8TUe6T3ShihXJLiJOiqyafzFKUO4aqIHDUCIvADdGNShcbc2W5PMr3LerXRv7mafvFZ9lRENxJmug==}
+  ts-morph@24.0.0:
+    resolution: {integrity: sha512-2OAOg/Ob5yx9Et7ZX4CvTCc0UFoZHwLEJ+dpDPSUi5TgwwlTlX47w+iFRrEwzUZwYACjq83cgjS/Da50Ga37uw==}
 
   tshy@3.0.2:
     resolution: {integrity: sha512-8GkWnAfmNXxl8iDTZ1o2H4jdaj9H7HeDKkr5qd0ZhQBCNA41D3xqTyg2Ycs51VCfmjJ5e+0v9AUmD6ylAI9Bgw==}
@@ -2588,12 +2600,11 @@ snapshots:
     dependencies:
       '@tapjs/core': 4.0.0(@types/node@20.17.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  '@ts-morph/common@0.24.0':
+  '@ts-morph/common@0.25.0':
     dependencies:
-      fast-glob: 3.3.2
       minimatch: 9.0.5
-      mkdirp: 3.0.1
       path-browserify: 1.0.1
+      tinyglobby: 0.2.10
 
   '@tsconfig/node14@14.1.2': {}
 
@@ -2756,7 +2767,7 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
-  code-block-writer@13.0.2: {}
+  code-block-writer@13.0.3: {}
 
   code-excerpt@4.0.0:
     dependencies:
@@ -2881,6 +2892,10 @@ snapshots:
   fastq@1.17.1:
     dependencies:
       reusify: 1.0.4
+
+  fdir@6.4.2(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
 
   fill-range@7.1.1:
     dependencies:
@@ -3719,6 +3734,11 @@ snapshots:
       glob: 10.4.5
       minimatch: 9.0.5
 
+  tinyglobby@0.2.10:
+    dependencies:
+      fdir: 6.4.2(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   tmp@0.0.33:
     dependencies:
       os-tmpdir: 1.0.2
@@ -3731,10 +3751,10 @@ snapshots:
 
   trivial-deferred@2.0.0: {}
 
-  ts-morph@23.0.0:
+  ts-morph@24.0.0:
     dependencies:
-      '@ts-morph/common': 0.24.0
-      code-block-writer: 13.0.2
+      '@ts-morph/common': 0.25.0
+      code-block-writer: 13.0.3
 
   tshy@3.0.2:
     dependencies:
