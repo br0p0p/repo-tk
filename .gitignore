@@ -2,3 +2,4 @@ node_modules
 .tap
 dist
 .DS_Store
+.envrc
