@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"dev": "tsx ./src/cli.ts",
-		"prepare": "tshy",
+		"prepare": "tshy || pnpm dlx tshy",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {

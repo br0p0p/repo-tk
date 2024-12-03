@@ -14,7 +14,7 @@
 	},
 	"scripts": {
 		"dev": "tsx ./src/cli.ts",
-		"prepare": "tshy",
+		"prepare": "tshy || pnpm dlx tshy",
 		"test": "tap run --allow-incomplete-coverage",
 		"typecheck": "tsc --noEmit"
 	},
